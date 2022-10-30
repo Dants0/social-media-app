@@ -6,25 +6,23 @@ const Register = () => {
     <div className="register">
       <div className="card">
         <div className="left">
-          <h1>Lama Social.</h1>
+          <h1>Must Social.</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
+            A nova rede social
           </p>
-          <span>Do you have an account?</span>
+          <span>Possui conta?</span>
           <Link to="/login">
-          <button>Login</button>
+            <button>Entrar</button>
           </Link>
         </div>
         <div className="right">
-          <h1>Register</h1>
+          <h1>Registrar</h1>
           <form>
-            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Usuário" />
             <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <input type="text" placeholder="Name" />
-            <button>Register</button>
+            <input type="password" placeholder="Senha" />
+            <input type="text" placeholder="Nome" />
+            <button>Registrar</button>
           </form>
         </div>
       </div>

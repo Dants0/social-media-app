@@ -14,22 +14,20 @@ const Login = () => {
     <div className="login">
       <div className="card">
         <div className="left">
-          <h1>Hello World.</h1>
+          <h1>Must Social.</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
+            A nova rede social
           </p>
-          <span>Don't you have an account?</span>
+          <span>Não possui conta?</span>
           <Link to="/register">
-            <button>Register</button>
+            <button>Registrar</button>
           </Link>
         </div>
         <div className="right">
-          <h1>Login</h1>
+          <h1>Entrar</h1>
           <form>
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
+            <input type="text" placeholder="Usuário" />
+            <input type="password" placeholder="Senha" />
             <div className="sectright">
               <button onClick={handleLogin} className="btnLogin">Login</button>
             </div>

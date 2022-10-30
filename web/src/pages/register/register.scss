@@ -81,6 +81,11 @@
           font-weight: bold;
           cursor: pointer;
         }
+        button:hover {
+          filter: brightness(110%);
+          transition: all 0.2s ease-in-out;
+          background-color: #938eefcc;
+        }
       }
     }
   }
