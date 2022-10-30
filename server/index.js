@@ -1,7 +1,10 @@
-import Express from "express";
+import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-const app = Express();
+const app = express();
+
+
+
 import authRoutes from "./routes/auth.js"
 import userRoutes from "./routes/users.js"
 import postRoutes from "./routes/posts.js"
@@ -9,8 +12,14 @@ import commentRoutes from "./routes/comments.js"
 import likeRoutes from "./routes/likes.js"
 
 //middleware
-app.use(Express.json());
-app.use(cors())
+app.use((req,res,next)=>{
+    res.header("Access-Control-Allow-Credentials", true)
+    next()
+})
+app.use(express.json());
+app.use(cors({
+    origin: "http://localhost:3000"
+}))
 app.use(cookieParser());
 
 app.use("/api/users", userRoutes)
