@@ -35,9 +35,11 @@
 
         input {
           border: none;
-          width: 500px;
+          width: 1000px;
           background-color: transparent;
           color: themed("textColor");
+          outline: none;
+          border: none;
 
           @include mobile{
             display: none;
