@@ -1,23 +1,28 @@
 import { useQuery } from '@tanstack/react-query'
-import { makeRequest } from '../../services/axios';
+import axios from 'axios';
+// import { makeRequest } from '../../services/axios';
 import Post from "../post/Post";
 import "./posts.scss";
 
+const baseUrl = 'http://localhost:8000/api/'
+
 const Posts = () => {
 
-  // const { isLoading, error, data } = useQuery(['posts'], () =>
-  //   makeRequest.get('/posts').then((res)=>{
-  //     return res.data
-  //   })
-  // )
 
-  // console.log(data)
+  const { isLoading, error, data } = useQuery(["posts"], () =>
+      axios.get(`${baseUrl}posts`).then((res)=>{
+      return res.data
+    })
+  )
+
+  console.log(data)
 
   return <div className="posts">
-    {/* {data.map(post=>(
-      <Post post={post} key={post.id}/>
-    ))} */}
-  </div>;
+    {
+      isLoading ? 'Loading...'
+      : data.map((post)=><Post post={post} key={post.id}/>)
+    }
+    </div>;
 };
 
 export default Posts;
